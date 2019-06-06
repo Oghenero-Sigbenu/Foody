@@ -1,6 +1,7 @@
 *{
     margin:0px;
     box-sizing: border-box;
+    border-style: none;
 }
 html, body{
 width: 100%;
@@ -69,25 +70,27 @@ button{
     padding: 15px;
     background-color: burlywood;
     width: 150px;
-    /* border-radius: 5px; */
+    border-radius: 5%;
     border: none;
 }
 .aftermainbanner{
     width: 100%;
     height: 500px;
     display: flex;
+    justify-content: space-between;
 
 }
 .aftermainbannerLeft{
-    width: 700px;
+    width: 50%;
 
 }
 .lefttext{
-     /* width: 30%; */
+     width: 40%;
      text-align: left;
-     align-items: flex-end;
-     margin-left: 300px;
-     margin-top: 150px;
+     /* align-items: flex-end; */
+     /* margin-left: 300px; */
+     /* margin-top: 150px; */
+     margin: 90px auto;
 }
 .lefttext h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -96,9 +99,16 @@ button{
 }
 
 .aftermainbannerRight{
-    width: 700px;
-    background-image: url(images/bowl.jpg);
-    background-size: cover;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.aftermainbannerRight img{
+    width: 100%;
+   height: 100%;
+}
+.aftermainbannerRight:hover .overlay{
+width: 100%;
 }
 .menubar{
     width: 100%;
@@ -108,91 +118,119 @@ button{
     padding-left: 300px;
     padding-top: 30px;
 }
+.downtext a:hover .dtspan{
+    border-bottom: 1px solid red;
+    padding: 10px;
+    
+}
+.dtspan{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .showimages{
     width: 100%;
     display: flex;
-    height: 300px;
-    background-color: red;
-}
-.showimage1{
-    background-image: url(images/b1.jpg)
-}
-.showimage2{
-    background-image: url(images/b2.jpg)
-}
-.showimage3{
-    background-image: url(images/b3.jpg)
+    height: 350px;
 }
 .s1{
     width: 33.3%;
-    background-size: cover;
+    /* background-size: cover; */
+    object-fit: cover;
+    position: relative;
+}
+.s1 img{
+    width: 100%;
+    height: 100%;
+}
+.overlay{
+    background-color: rgba(14, 7, 10, 0.418);
+    position: absolute;
+    width:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    transition: .5s ease;
+    overflow: hidden;
+    color: white;
+}
+.s1:hover .overlay{
+    width: 100%;
+}
+.overlay h1{
+    margin-top: 120px;
+    font-size: 30px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.overlay p{
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .fourth{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 300px;
+  height: 250px;
   position: relative;
 }
 
 .fourthtext{
     width: 100%;
-    height: 50%;
     /* padding-left: 400px; */
     padding-top: 30px;
-    text-align: center;
-  
-
-
+    text-align: center;   
 }
 .uptext{
     font-size: 30px;
     align-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
-    top: 60px; 
+    top: 30px; 
     bottom: 20px; 
     text-align: center;
 }
 
 .downtext{
     position: absolute;
+    height: 50%;
     bottom: 10px; 
     /* top: 30px; */
 }
 .foodmenu{
-    width: 100%;
-    /* height:100px; */
+    width: 70%;
+    height:500px;
     display:flex;
+    margin: 0 auto;
+    justify-content: space-between;
+
 }
-.leftbox{
-    width: 80%;
+
+.leftbox, .rightbox{
+    width: 40%;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   align-items: flex-end;
-   /* height: 800px; */
+   /* align-items: flex-end; */
+   height: 450px;
 
 }
-/* .rightbox{
-    width: 50%;
-    height: 400px;
+.rightbox{
+    /* width: 50%; */
     
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-} */
+    
+  
+}
 .innerbox{
-    /* width: 60%; */
-    /* background-color: aquamarine; */
-    height: 90px;
-    /* border-radius: 5px solid aquamarine; */
+    height: 100px;
     box-shadow: 5px 10px 18px #888888;
     padding-right: 30px;
     display: flex;
+    /* margin-bottom: 5px; */
 
 }
 .smallimages{
@@ -255,14 +293,14 @@ span{
     
     
 }
-/* .strawberry{
+ .strawberry{
     position: absolute;
     top: -10px;
+    left: -40px;
     /* right: -10px; */
     /* padding-top: -80px; 
-    margin-right: 0px; 
-
-} */
+    /* margin-right: 0px;  */
+} 
 .cheifgallery{
     Width: 100%;
     height: 340px;
@@ -281,11 +319,11 @@ span{
 }
 .newbox{
     width: 100%;
-    height: 640px;
+    height: 500px;
     background-image: url(images/apple.png), url(images/straw.png);
     background-position: left bottom, right top;
    background-repeat: no-repeat, no-repeat; 
-   background-size: 10px 10px;
+   background-size: 90px 100px;
 }
 /* .redbox{
     height: 100px;
@@ -295,7 +333,7 @@ span{
 } */
  .maingallery{
     width: 17%; 
-    height: 340px;
+    height: 330px;
     justify-content: space-around;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
@@ -309,11 +347,11 @@ span{
 }
 .maingallery .fa{
     font-size: 15px;
-    width: 30px;
-    border-radius: 25px;
+    border-radius: 50%;
     text-align: center;
-    padding: 7px;
-    border: 1px solid red;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
 
 }
 .apple{
@@ -403,6 +441,16 @@ margin: 0 auto;
   width: 50%;
   padding-top: 90px;
 }
+.yellow .fa{
+    padding: 6px;
+}
+.yellow h4{
+    font-family:  monospace;
+    white-space: pre;
+}
+.yellow h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 form li{
     list-style: none;
     padding: 10px;
@@ -428,15 +476,11 @@ form{padding-top: 80px;}
 }
 .fat{
     width: 400px;
-    height: 90px;
-    /* displatty: flex; */
-    background-color: aqua;
-    /* position: absolute;
-    top: 200px; */
-    /* right: 200px; */
-    
-     margin: 0 auto;
-     margin-bottom: 60px;
+    height: 200px;
+    color: white;
+    padding-top: 150px;
+    margin: 0 auto;
+    margin-top: 0px;
 }
 a .fa{
     font-size: 20px;
@@ -446,22 +490,31 @@ a .fa{
 
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
     body{
-        color: red;
-        /* overflow: hidden; */
+        overflow-x: hidden;
     }
-    .navmenu{
+    #nav-menu{
         display: none;
+        height: 150px;
+        width: 150px
     }
+    .navlogo{
+        width:190px;
+
+    }
+    
     .navbar{
         position: relative;
     }
     .hambuger{
-        margin-left: 100px;
+        /* margin-left:230px; */
+        /* display: block; */
+        position: absolute;
+        right: 90px;
     }
     .hambuger span{
-      height: 5px;
+      height: 4px;
       width: 30px; 
       background-color: white;
       display: block;
@@ -469,30 +522,34 @@ a .fa{
       margin: 5px;
 
     }
+    .Mainbanner{
+        height: 600px;
+    }
     .down span:nth-child(1){
 
-        transform: rotate(45deg) translate(-10px, 5px);
+        transform: rotate(45deg) translate(3px, 15px);
     }
 
     .down span:nth-child(2){
         opacity: 0;
-    }
+    }  
     .down span:nth-child(3){
 
-        transform: rotate(-45deg) translate(-10px, 5px);
-    }
+        transform: rotate(-45deg) translate(-3px, -10px);
+    } 
     .Mainbannertext{
-        width: 200px;    
+        width: 300px;    
     }
     .Mainbannertext h1{
         font-size: 40px;
 }
 .aftermainbanner{
    justify-content: center;
+   height: 250px;
 }
 .aftermainbannerLeft{
-    width: 300px;
-height: 300px;
+    width: 100%;
+height: 250px;
 
 }
 .aftermainbannerRight{
@@ -502,8 +559,8 @@ height: 300px;
     text-align: center;
     /* text-align: left; */
      /* align-items: flex-start; */
-     margin-left: 50px;
-     margin-top: 150px;
+     margin: 0 auto;
+     margin-top: 40px;
 
 }
 .menubar{
@@ -528,16 +585,7 @@ height: 300px;
     height: 300px;
     position: relative;
   }
-  .innerbox{
-    /* width: 60%; */
-    /* background-color: aquamarine; */
-    /* height: 90px; */
-    /* border-radius: 5px solid aquamarine; */
-    box-shadow: 5px 10px 18px #888888;
-    /* padding-right: 30px; */
-    display: flex;
-
-}
+  
   
   .fourthtext{
       width: 100%;
@@ -557,33 +605,42 @@ height: 300px;
 }
 
 .foodmenu{
-    width: 600px;
-    height:1000px;
+    width: 100%;
+    height: 1050px;
     display:flex;
     flex-direction: column;
-    /* background-color: black; */
+    margin-bottom: 50px;
 
 }
 .leftbox{
-    width: 600px;
-  
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   align-items: flex-start;
+   /* align-items: flex-start; */
    height: 480px;
-   margin-left: 40px;
+   margin: 0px auto;
+
+}
+.innerbox{
+    width: 80%;
+    height: 110px;
+    /* border-radius: 5px solid aquamarine; */
+    box-shadow: 5px 10px 18px #888888;
+    /* padding-right: 30px; */
+    display: flex;
+    margin: 0 auto;
 
 }
 
 .rightbox{
-    width: 600px;
+    width: 80%;
     height: 480px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin-left: 40px;
+    margin: 0 auto;
 }
 .reservation{
     background-image: url(images/PIZZA.jpg);
@@ -660,6 +717,7 @@ height: 300px;
     background-size: cover;
     width: 100%;
     height: 400px;
+    object-fit: cover;
     position: relative;
     justify-content: center;
 }
@@ -696,9 +754,7 @@ margin: 10px auto;
 }
  .chiefinput button{
     background-color: red;
-    /* margin-left: 20px; */
-     /* margin-right: 0px;  */
-    /* width: 40%; */
+    
     padding-right: 10px;
 } 
 .chiefinput{
@@ -744,6 +800,155 @@ form{
     width: 100%;
     height: 600px;
     background-image: url(images/map5.jpg);
+    background-size: cover;
+   position: relative;
+}
+.footer{
+    width: 100%;
+    background-color:rgb(0, 0, 0);
+    height: 300px;
+    padding-top:  200px;
+}
+.fat{
+    width: 400px;
+    height: 90px;
+    /* position: absolute; */
+    /* z-index: 70px; */
+     margin: 0 auto;
+     margin-top: 0px;
+     text-align: center;
+     padding-top: 40px;
+
+     
+}
+.year{
+    width: 900px;
+    background-color: red;
+    height: 200px;
+}}
+@media screen and (min-width:620px) and (max-width: 1000px) {
+   
+   body{
+    overflow-x: hidden;
+    background-color: blue;
+   } 
+   .navmenu{
+        display: none;
+    }
+    .menubar a{
+        display: none;
+    }
+  .leftbox{
+    margin: 0 auto;
+
+  }
+    .Mainbannertext{
+        width: 500px;
+    }
+    .Mainbannertext h1{
+        font-size: 50px;    
+    }
+    .showimages{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+    .s1{
+        height: 300px;
+        width: 100%;
+    }
+    .foodmenu{
+        width: 100%;
+        height: 1070px;
+        display:flex;
+        flex-direction: column;
+        margin-top: 0px;
+        margin-bottom: 60px;
+    
+    }
+    .leftbox{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       /* align-items: flex-start; */
+       height: 480px;
+       margin: 70px auto;;
+    
+    }
+    .innerbox{
+        width: 80%;
+        height: 110px;
+        /* border-radius: 5px solid aquamarine; */
+        box-shadow: 5px 10px 18px #888888;
+        /* padding-right: 30px; */
+        display: flex;
+        margin: 0 auto;
+    
+    }
+    
+    .rightbox{
+        width: 80%;
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+    
+.aftermainbanner{
+   justify-content: center;
+
+}
+.aftermainbannerLeft{
+    width: 300px;
+    height: 300px;
+
+}
+.aftermainbannerRight{
+  display: none;
+}
+.lefttext{
+    text-align: center;
+     margin-left: 50px;
+     width: 400px;
+     
+     
+}
+.r4{
+    color: white;
+}
+.hangingbox{
+    width: 60%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 20%;
+    top: 90px;
+    background-color: antiquewhite;
+}
+.white{
+    width: 100%;
+    height: 350px;
+    background-color: white;
+}
+form{
+    padding-top: 50px;
+}
+.yellow{
+    background-color: rgb(185, 159, 9);
+  width: 100%;
+  height: 350px;
+  padding-top: 50px;
+}
+.map{
+    width: 100%;
+    height: 600px;
+    background-image: url(images/map5.jpg);
+    background-size: cover;
    position: relative;
 }
 .footer{
@@ -756,10 +961,7 @@ form{
     width: 400px;
     height: 90px;
     /* displatty: flex; */
-    background-color: aqua;
-    /* position: absolute; */
-    /* top: 200px;  */
-    /* right: 200px; */
+    /* background-color: aqua; */
     z-index: 70px;
      margin: 0 auto;
      /* margin-top: 90px; */
@@ -770,36 +972,93 @@ form{
     background-color: red;
     height: 200px;
 }
-@media screen and  (min-width: 800px) and (max-width: 1200px){
-    .navmenu{
-        display: none;
-    }
-   
-    .Mainbannertext{
-        width: 200px;
-        background-color: red;
-    }
-    .Mainbannertext h1{
-        font-size: 40px;    
+.reservation{
+    background-image: url(images/PIZZA.jpg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-content: center;
+    position: relative;
+    
 }
-.aftermainbanner{
-   justify-content: center;
-
-}
-.aftermainbannerLeft{
+.reservationboxes{
     width: 300px;
-height: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px; 
+    margin-left: 60px
+}
+.reservationboxes input{
+    padding: 10px;
+}
+.reservationtext{
+    height: 150px;
+    text-align: center;
+   padding-top: 50px;
+
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cheifgallery{
+    height: 600px;
+    width: 100%;
+    /* background-color: aqua; */
+     position: relative; 
 
 }
-.aftermainbannerRight{
-  display: none;
+.maingallery{
+    width: 200px; 
+    height: 200px;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
 }
-.lefttext{
-    text-align: center;
-    /* text-align: left; */
-     /* align-items: flex-start; */
-     margin-left: 50px;
-     background-color: red;
+.gallerywrap{
+    width:90%;
+    height: 600px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+     position: absolute;
+    left: 15%;  
+    justify-content: center;
+    /* background-color: rgba(0, 0, 255, 0.822) */
+}
+.footer{
+    width: 100%;
+    background-color:rgb(0, 0, 0);
+    height: 300px;
+    padding-top:  200px;
+     margin: 0 auto;
+    
+}
+/* .fat{
+    width: 400px;
+    height: 90px;
+    position: absolute;
+    /* z-index: 70px; */
+     /* margin: 0 auto; */
+     /* margin-top: 150px;
+     text-align: center;
+     padding-top: 30px; */
      
+/* } */ */
+.fat{
+    width: 400px;
+    height: 90px;
+    /* displatty: flex; */
+    /* background-color: aqua; */
+    z-index: 70px;
+     margin: 0 auto;
+     /* margin-top: 90px; */
      
-}}
+}
+.year{
+    width: 900px;
+    background-color: red;
+    height: 200px;
+}
+}
