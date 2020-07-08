@@ -10,6 +10,7 @@ width: 100%;
 height: 100%;
 
 }
+
 .Mainbanner{
     background-image: url(images/wine.jpg);
     background-size: cover;
@@ -29,7 +30,7 @@ height: 100%;
 }
 .navlogo{
     width: 50%;
-    padding-left: 100px;
+    padding-left: 1em;
      font-size: 40px;
     font-family: 'Pacifico', cursive;
 }
@@ -541,9 +542,14 @@ form{padding-top: 80px;}
     .chiefinput{
         width: 60%;
     }
+    .menubar{
+        display: none ;
+    }
 }
 @media screen and (max-width: 600px){
-    body{
+    section{
+        overflow-x: hidden
+    }body{
         overflow-x: hidden;
     }
     .Mainbanner{
@@ -557,6 +563,9 @@ form{padding-top: 80px;}
 }
 .remove{
     display: none;
+}
+.menubar{
+    display: none !important;
 }
 .lefttext{
     width: 90%;
@@ -640,6 +649,9 @@ form{
      margin-top: 0px;
      text-align: center;
      padding-top: 40px;
+}
+form input, form textarea{
+    width: 80%;
 }
 }
 
