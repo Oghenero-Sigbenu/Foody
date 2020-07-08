@@ -2,8 +2,14 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wine Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./font-awesome/css/fontawesome-all.css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -14,29 +20,33 @@
 <body>
     <section>
         <div class="Mainbanner">
-            <div class="navbar">
-                <div class="navlogo">
-                    <a>FOODY</a>
-                </div>
-                <div class="hambuger ">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="navmenu" id="nav-menu">
-                    <a>HOME</a>
-                    <a>PAGES</a>
-                    <a>MENU</a>
-                    <a>GALLERY</a>
-                    <a>BLOG</a>
-                    <a>CONTACTS</a>
-                </div>
-            </div>
+          <nav class="navbar navbar-expand-md  navbar-dark">
+                <a class="navbar-brand navlogo" href="#">FOODY</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#men">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#galler">Gallery</a>
+                    </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>  
+                  </ul>
+                </div>  
+              </nav>
             <div class="Mainbannertext" id="home">
                 <h1>CHOSE BEST FOOD</h1>
                 <p>Lorem ipsum dolor sit, ipsum et blanditiis facilis earum qui dolores error <br>velit, veritatis
                     minima voluptate! Voluptas incidunt illo quos id.</p>
-                <button>Book a table.</button>
+                <button class="banner-text">Book a table.</button>
 
             </div>
         </div>
@@ -57,12 +67,23 @@
             </div>
         </div>
         <div class="menubar">
-            <a>HOME</a>
-            <a>PAGES</a>
-            <a>MENU</a>
-            <a>GALLERY</a>
-            <a>BLOG</a>
-            <a>CONTACTS</a>
+            <ul class="menu-list">
+             <li>
+                <a>HOME</a>
+             </li>  
+             <li>
+             <a>PAGES</a>
+            </li>
+             <li>
+                <a>GALLERY</a>
+             </li> 
+             <li>
+                <a>BLOG</a>
+             </li>
+             <li>
+                <a>CONTACTS</a>
+             </li>
+            </ul>
         </div>
         <div class="showimages">
             <div class="s1">
@@ -92,218 +113,247 @@
                 <h1>Choose Your Dish</h1>
             </div>
             <div class="downtext fourthtext">
-                <a><span href="home" class="dtspan">HOME</span></a>
-                <a><span class="dtspan">PAGES</span></a>
-                <a href="#men"><span class="dtspan" >MENU</span></a>
-                <a href="#galler"><span class="dtspan" >GALLERY</span></a>
+                <a href="#men">Home</a>
+                <a href="#men">Pages</a>
+                <a href="#men">Menu</a>
+                <a href="#galler">Gallery</a>
             </div>
         </div>
         <div class="foodmenu" id="men">
-            <div class="leftbox">
+            <div class="menu-box">
                 <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
+                    <div class="small-images ">
+                        <img src="./images/sweet.jpg" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
                         <p>Tasty Meals/food/love</p>
                     </div>
                     <div class="amount">
-                        <h3>$67</h3>
+                        <h6 class="red">$67</h6>
                     </div>
                 </div>
                 <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
+                    <div class="small-images ">
+                        <img src="./images/sweet.jpg" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
                         <p>Tasty Meals/food/love</p>
                     </div>
                     <div class="amount">
-                        <h3>$67</h3>
+                        <h6 class="red">$67</h6>
                     </div>
                 </div>
                 <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
+                    <div class="small-images ">
+                        <img src="./images/sweet.jpg" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
                         <p>Tasty Meals/food/love</p>
                     </div>
                     <div class="amount">
-                        <h3>$67</h3>
+                        <h6 class="red">$67</h6>
                     </div>
                 </div>
                 <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
+                    <div class="small-images ">
+                        <img src="./images/straw.png" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
                         <p>Tasty Meals/food/love</p>
                     </div>
                     <div class="amount">
-                        <h3>$67</h3>
+                        <h6 class="red">$67</h6>
                     </div>
                 </div>
+                <div class="innerbox">
+                    <div class="small-images ">
+                        <img src="./images/PIZZA.jpg" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
+                        <p>Tasty Meals/food/love</p>
+                    </div>
+                    <div class="amount">
+                        <h6 class="red">$67</h6>
+                    </div>
+                </div>
+                <div class="innerbox">
+                    <div class="small-images ">
+                        <img src="./images/sweet.jpg" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
+                        <p>Tasty Meals/food/love</p>
+                    </div>
+                    <div class="amount">
+                        <h6 class="red">$67</h6>
+                    </div>
+                </div>
+                <div class="innerbox">
+                    <div class="small-images ">
+                        <img src="./images/sweet.jpg" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
+                        <p>Tasty Meals/food/love</p>
+                    </div>
+                    <div class="amount">
+                        <h6 class="red">$67</h6>
+                    </div>
+                </div>
+                <div class="innerbox">
+                    <div class="small-images ">
+                        <img src="./images/sweet.jpg" alt="food"/>
+                    </div>
+                    <div class="small-text ">
+                        <h6 class="red">CHINESE CAKE</h6>
+                        <p>Tasty Meals/food/love</p>
+                    </div>
+                    <div class="amount">
+                        <h6 class="red">$67</h6>
+                    </div>
+                </div>
+            
             </div>
-            <div class="rightbox">
-                <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
-                        <p>Tasty Meals/food/love</p>
-                    </div>
-                    <div class="amount">
-                        <h3>$67</h3>
-                    </div>
-                </div>
-                <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
-                        <p>Tasty Meals/food/love</p>
-                    </div>
-                    <div class="amount">
-                        <h3>$67</h3>
-                    </div>
-                </div>
-                <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
-                        <p>Tasty Meals/food/love</p>
-                    </div>
-                    <div class="amount">
-                        <h3>$67</h3>
-                    </div>
-                </div>
-                <div class="innerbox">
-                    <div class="smallimages"></div>
-                    <div class="smalltext">
-                        <h3><span>CHINESE CAKE</span></h3>
-                        <p>Tasty Meals/food/love</p>
-                    </div>
-                    <div class="amount">
-                        <h3>$67</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
         <div class="reservation">
             <div class="reservationtext">
-                <h1>Make Your Reservation</h1>
+                <h4>Make Your Reservation</h4>
             </div>
             <div class="reservationboxes">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Name">
-                <button>FINISH</button>
+                <input type="text" placeholder="Date">
+                <input type="text" placeholder="Time">
+                <input type="text" placeholder="Person">
+                <button class="red-btn">FINISH</button>
             </div>
         </div>
         <div class="newbox">
             <div class="chef">
-                <div class="chieftext">
-                    <h1>MEET OUR CHEF</h1>
-                    <p><span><i>Help us Offer.</i></span></p>
+                <div class="straw">
+                    <img src="images/straw.png"/>
                 </div>
-                <!-- <div class="strawberry"><img src="images/straw.png" alt="This is a strawberry." width="150px"
-                        height="200px"></div> -->
+                <h4>MEET OUR CHEF</h4>
+                <p class="red"><i>Help us Offer.</i></p>
             </div>
             <div class="cheifgallery" id="galler">
-                <!-- <div class="apple"><img src="images/apple.png" width=70px height=70px> </div>  -->
                 <div class="gallerywrap">
                     <div class="maingallery">
-                        <img src="images/chef6.png" width=150px height=200px>
-                        <h3>Rob Terry</h3>
-                        <p><span>CHIEF FOUNDER</span></p>
-                        <div class="remove">
-                            <i class="fa fa-facebook-f"></i>
-                            <i class="fa fa-twitter"></i>
-                            <i class="fa fa-behance"></i>
-                            <i class="fa fa-instagram"></i></div>
-                    </div>
-
-                    <div class="maingallery">
-                        <div class="mg">
-                            <img src="images/chef2.jpg" width=150px height=200px>
+                        <div class="chefs">
+                            <img src="images/chef-cook.jpg">
                         </div>
-                        <h3>Rob Terry</h3>
-                        <p><span>CHIEF FOUNDER</span></p>
+                       <div class="chefs-details" >
+                        <p ><strong>Rob Terry</strong></p>
+                        <span class="red">CHIEF FOUNDER</span>
                         <div class="remove">
                             <i class="fa fa-facebook-f"></i>
                             <i class="fa fa-twitter"></i>
                             <i class="fa fa-behance"></i>
-                            <i class="fa fa-instagram"></i></div>
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                       </div>
                     </div>
                     <div class="maingallery">
-                        <img src="images/chef4.jpg" width=150px height=200px>
-                        <h3>Rob Terry</h3>
-                        <p><span>CHIEF FOUNDER</span></p>
+                        <div class="chefs">
+                            <img src="images/chef-baking.jpg">
+                        </div>
+                       <div class="chefs-details" >
+                        <p ><strong>Rob Terry</strong></p>
+                        <span class="red">CHIEF FOUNDER</span>
                         <div class="remove">
                             <i class="fa fa-facebook-f"></i>
                             <i class="fa fa-twitter"></i>
                             <i class="fa fa-behance"></i>
-                            <i class="fa fa-instagram"></i></div>
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                       </div>
                     </div>
                     <div class="maingallery">
-                        <img src="images/chef (2).jpg" width=150px height=200px>
-                        <h3>Rob Terry</h3>
-                        <p><span>CHIEF FOUNDER</span></p>
+                        <div class="chefs">
+                            <img src="images/chef-st.jpg">
+                        </div>
+                       <div class="chefs-details" >
+                        <p ><strong>Rob Terry</strong></p>
+                        <span class="red">CHIEF FOUNDER</span>
                         <div class="remove">
                             <i class="fa fa-facebook-f"></i>
                             <i class="fa fa-twitter"></i>
                             <i class="fa fa-behance"></i>
-                            <i class="fa fa-instagram"></i></div>
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                       </div>
                     </div>
+                    <div class="maingallery">
+                        <div class="chefs">
+                            <img src="images/chef2.jpg">
+                        </div>
+                       <div class="chefs-details" >
+                        <p ><strong>Rob Terry</strong></p>
+                        <span class="red">CHIEF FOUNDER</span>
+                        <div class="remove">
+                            <i class="fa fa-facebook-f"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-behance"></i>
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="apple"> 
+                    <img src="images/apple.png" alt="fruits"/>
                 </div>
             </div>
+        </div>
             <div class="sendemail">
-                <!-- <div class="year">ggg</div> -->
-                <div class="chieftext r4">
-                    <h1>MEET OUR CHEF</h1>
-                    <p><span><i>Help us Offer.</i></span></p>
+                <div class="chef">
+                    <h4>Subcribe Now</h4>
+                    <p class="red"><i>Help us Offer.</i></p>
                 </div>
-
                 <div class="chiefinput">
                     <input type="text" class="email" value="Name"></input>
-                    <span><button class="subscribe">SUBMIT</button></span>
+                   <button class="subscribe">SUBMIT <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                 </div>
-                <div class="awesome">
+                <div class="social-media">
                     <a><i class="fa fa-facebook-f"></i></a>
                     <a><i class="fa fa-twitter"></i></a>
                     <a><i class="fa fa-behance"></i></a>
                     <a><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="map">
+            <div class="map" id="contact">
                 <div class="hangingbox">
                     <div class="white">
                         <form action="" method="">
-                            <ul>
-                                <h2>GET IN TOUCH</h2>
-                                <li> <input type="text" value="Your Name*"></input></li>
-                                <li><input type="text" value="Email Address*"></input></li>
+                            <ul class="info">
+                                <h6>GET IN TOUCH</h6>
+                                <li> <input type="text" value="Your Name*"/></li>
+                                <li><input type="text" value="Email Address*"/></li>
                                 <li><textarea value="">Write Message*</textarea></li>
-                                <li><button>SEND MESSAGE</button></li>
+                                <li><button class="footer-btn">SEND MESSAGE</button></li>
                             </ul>
                         </form>
                     </div>
                     <div class="yellow">
-                        <ul>
+                        <ul class="info">
                             <li>
-                                <h4>CONTACT WITH US</h4>
+                                <p class="space">CONTACT WITH US</p>
                             </li>
                             <li>
-                                <h2>SPA INFO</h2>
-                            </li>
-
-                            <li>
-                                <p> <i class="fa fa-map-marker" aria-hidden="true"></i>Address: No 4,Yusuf Road, Ketu
-                                    Lagos</p>
+                                <h5>SPA INFO</h5>
                             </li>
                             <li>
-                                <p><i class="fa fa-phone" aria-hidden="true"></i> 08134567898</p>
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Address: No 4,Yusuf Road
+                                    Lagos</span></p>
                             </li>
                             <li>
-                                <p><i class="fa fa-paper-plane" aria-hidden="true"></i> INFO@PAYRIGHT.COM</p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i><span>08134567898</span></p>
                             </li>
-
+                            <li>
+                                <p><i class="fa fa-paper-plane" aria-hidden="true"></i><span>INFO@PAYRIGHT.COM</span></p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -315,14 +365,13 @@
                     <a class="fa fa-behance"></a>
                     <a class="fa fa-instagram"></a>
                     <div>
-                        <p>@Copyright Themeverest all at reserved.</p>
+                        <p>@Copyright 2020 <span class="gold">Themeverest</span> all at reserved.</p>
                     </div>
                 </div>
             </div>
 
     </section>
     <script src="script.js"></script>
-
 </body>
 
 </html>

@@ -1,18 +1,21 @@
-*{
+*, body{
     margin:0px;
+    padding:0;
     box-sizing: border-box;
     border-style: none;
+ 
 }
 html, body{
 width: 100%;
 height: 100%;
+
 }
 .Mainbanner{
     background-image: url(images/wine.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 550px;
+    height: 100vh;
     /* margin-top: -20px; */
     align-items: center;
     margin: 0 auto;
@@ -20,38 +23,20 @@ height: 100%;
 .navbar{
     width: 100%;
     display: flex;
+    justify-content: space-between;
    align-items: center;
-   padding: 20px;
    color: white;
 }
 .navlogo{
     width: 50%;
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-     font-size: 30px;
-     /* font-family: 'Open Sans', sans-serif; */
-font-family: 'Pacifico', cursive;
-     
+    padding-left: 100px;
+     font-size: 40px;
+    font-family: 'Pacifico', cursive;
 }
-.navmenu{
-    width: 50%;
-    justify-content: space-around;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
- a{
-    padding: 20px; 
-}
-.navmenu.responsive{
-    position: relative;
-}
-.navmenu.responsive a{
-    float: none;
-    display: block;
-    text-align: center;
-}
+
 .Mainbannertext{
     margin: 0 auto;
     align-content: center;
-    width: 800px;
     color: white;
     font-family: -'apple-system', 'BlinkMacSystemFont', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 100px;
@@ -63,38 +48,41 @@ font-family: 'Pacifico', cursive;
     
 }
 .Mainbannertext h1{
-    font-size: 70px;
+    font-size: 4em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-bottom: 40px;
+    font-weight: 800;
 }   
-button{
-    padding: 15px;
+.banner-text{
+    padding: .5em;
     background-color: burlywood;
     width: 150px;
     border-radius: 5%;
     border: none;
 }
+.navbar-collapse{
+justify-content: flex-end;
+}
 .aftermainbanner{
     width: 100%;
-    height: 500px;
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
 }
 .aftermainbannerLeft{
     width: 50%;
-
+/*  */
 }
 .lefttext{
      width: 40%;
      text-align: left;
      margin: 90px auto;
 }
-.lefttext h2{
+/* .lefttext h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 50px;
     font-size: 40px;
-}
+} */
 
 .aftermainbannerRight{
     width: 50%;
@@ -107,38 +95,6 @@ button{
 }
 .aftermainbannerRight:hover .overlay{
 width: 100%;
-}
-.menubar{
-    width: 100%;
-    background-color: #DFD5D5;
-    height: 60px;
-    align-content: center;
-    padding-left: 300px;
-    padding-top: 30px;
-}
-.downtext a:hover .dtspan{
-    border-bottom: 1px solid red;
-    padding-bottom: 10px;
-    
-}
-.dtspan{
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.showimages{
-    width: 100%;
-    display: flex;
-    height: 350px;
-}
-.s1{
-    width: 33.3%;
-    /* background-size: cover; */
-    object-fit: cover;
-    position: relative;
-}
-.s1 img{
-    width: 100%;
-    height: 100%;
 }
 .overlay{
     background-color: rgba(14, 7, 10, 0.418);
@@ -167,126 +123,155 @@ width: 100%;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.fourth{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  height: 250px;
-  position: relative;
-}
-
-.fourthtext{
+.menubar{
     width: 100%;
-    /* padding-left: 400px; */
-    padding-top: 20px;
-    text-align: center;   
-}
-.uptext{
-    font-size: 30px;
+    background-color: #DFD5D5;
+    height: 60px;
     align-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
-    top: 30px; 
-    bottom: 20px; 
-    text-align: center;
+    padding-top: 20px;
+    margin-top: -1px;
 }
-
-.downtext{
-    position: absolute;
-    height: 50%;
-    bottom: 10px; 
-    /* top: 30px; */
+.menu-list{
+ margin: 0 auto;
+justify-content: center;
+display: flex;
+width: 80%;
 }
-.downtext a{
-    text-decoration: none;
+.menu-list li{
+    list-style: none;
+    /* display: inline-block; */
 }
-.foodmenu{
-    width: 70%;
-    height:500px;
-    display:flex;
-    margin: 0 auto;
-    justify-content: space-between;
-
+.menu-list li a, .downtext a {
+    padding: 0 1em; 
 }
-
-.leftbox, .rightbox{
-    width: 40%;
-    flex-wrap: wrap;
+.showimages{
+    width: 100%;
+    display: flex;
+    /* height: 350px; */
+}
+.s1{
+    width: 33.3%;
+    /* background-size: cover; */
+    object-fit: cover;
+    position: relative;
+}
+.s1 img{
+    width: 100%;
+    height: 100%;
+}
+.aftermainbannerRight:hover .overlay{
+    width: 100%;
+}
+.fourth{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-   /* align-items: flex-end; */
-   height: 450px;
-
-}
-
-.innerbox{
-    height: 100px;
-    box-shadow: 5px 10px 18px #888888;
-    padding-right: 30px;
-    display: flex;
-    /* margin-bottom: 5px; */
-
-}
-.smallimages{
-    width: 30%;
-    background-image: url(images/bread.jpg);
-    background-size: cover;
-
-}
-.smalltext{
-    width: 55%;
-    text-align: left;
-    padding-top: 20px;
-    padding-left: 10px;
-
-}
-.amount{
-    width: 15%;
-    align-items: center;
-    padding-top: 20px;
-}
-span{
-    color: red;
-}
-.reservation{
+    align-content: center;
+    height: 250px;
+  }
+  .fourthtext{
+      width: 100%;
+      padding-top: 20px;
+      text-align: center;   
+  }
+  .uptext{
+      font-size: 30px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+      padding: 2em 0;
+  }
+  .uptext h1{
+      font-weight: 800;
+  }
+  .downtext{
+      margin-top: -30px;
+  }
+  .downtext a{
+      text-decoration: none !important;
+      color: none !important;
+  }
+  .downtext a:hover{
+    text-decoration: none !important;
+    color: none !important;
+      padding-bottom: 4px;
+      border-bottom: 1px solid red;
+  }
+  .menu-box{
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between;
+  }
+  .innerbox{
+      background: white;
+      width: 400px;
+      margin: 0 auto;
+      margin-bottom: 1em;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 3px 3px 14px -7px rgba(0,0,0,0.75);
+  }
+  .small-images{
+      width: 100px;
+      height: 100px;
+  }
+  .small-images img{
+      width: 100%;
+      height:100px;
+  }
+  .small-text, .amount{
+      padding-top: 20px;
+  }
+  .small-text{
+      width: 60%;
+  }
+  .red{
+      color: red;
+  }
+  .amount{
+      padding-right: 20px;
+  }
+  .reservation{
     background-image: url(images/PIZZA.jpg);
     width: 100%;
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
     align-content: center;
-    position: relative;
 }
 .reservationboxes{
-    width: 60%;
-    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    /* display: flex;
     align-content: center;
     flex-wrap: wrap;
-    position: absolute;
-    top: 200px;
-    left: 20%;
-    justify-content: space-between;
+    justify-content:center; */
 }
 .reservationtext{
     text-align: center;
-   padding-top: 100px;
+    color:white;
+    padding-top: 100px;
+    padding-bottom: 30px;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.reservationboxes input{
+    margin-bottom: 10px;
+    padding: .3em;
+}
+.red-btn{
+    background: red;
+    color: white;
+    width: 205px;
+    padding: .3em;
 }
 .chef{
     width: 100%;
-    height: 300px;
     position: relative;
-    /* background-color: red; */
-    
-      
-}
-.chieftext{
     text-align: center;
     padding-top: 100px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
+
  .strawberry{
     position: absolute;
     top: -10px;
@@ -294,73 +279,95 @@ span{
 } 
 .cheifgallery{
     Width: 100%;
-    height: 340px;
-    position: relative;
-  
-    /* align-content: center; */
 }
 .gallerywrap{
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    right: 10%; 
-    justify-content: center;
-
+    justify-content: space-between;
+    margin: 20px auto;
 }
 .newbox{
     width: 100%;
-    height: 500px;
-    background-image: url(images/apple.png), url(images/straw.png);
+    position: relative;
+    /* background-image: url(images/apple.png), url(images/straw.png); */
     background-position: left bottom, right top;
    background-repeat: no-repeat, no-repeat; 
-   background-size: 90px 100px;
+   background-size: 50px;
+   /* margin-left: -10px;
+   margin-right: 0px; */
 }
-/* .redbox{
-    height: 100px;
-     width: 12%;
-     background-color: black;
-     z-index: 150px;
-} */
- .maingallery{
-    width: 17%; 
-    height: 330px;
-    justify-content: space-around;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+.chefs{
+    position: relative;
+    height:200px;
+    width:150px;
 }
-.mg::before{
-    content: "";
-    height: 220px;
-    width:12%;
-    background-color: black;
-    z-index: 90px;
+.chefs img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
-.maingallery .fa{
-    font-size: 15px;
-    border-radius: 50%;
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid black;
+.chefs::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 4px;
+    right: 7px;
+    bottom: 7px;
+    left: 4px;
+    border: 5px solid whitesmoke;
+}
 
+ .maingallery{
+    width: 19%; 
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.chefs-details{
+    text-align: center;
+}
+.chefs-details .red {
+    font-size: 12px;
+}
+.chefs-details p{
+    margin-bottom: 0 !important;
+}
+.straw{
+    float:right;
+    margin-right: 0;
+     width: 60px;
+     height: 60px;
 }
 .apple{
-    width: 10%;
+    /* width: 10%; */
     position: absolute;
-     top: 240px;
+     top: 320px;
      left: -15px;
-         
+     width: 60px;
+     height: 60px;
+}
+.apple img, .straw img{
+    width: 100%;
 }
 .sendemail{
     background-image: url(images/wine4.jpg);
     background-size: cover;
-    
     width: 100%;
     height: 400px;
-    position: relative;
 }
-
+.sendemail h4{
+    font-weight: 700;
+}
+.remove .fa{
+border-radius: 50%;
+border: 1px solid black;
+font-size: 12px;
+padding: 6px;
+}
+.remove .fa:hover{
+    border-color: red;
+    color: red;
+}
 .email{
    align-self: center;
    background-color: white;
@@ -374,39 +381,38 @@ margin: 0 auto;
     background-color: rgb(190, 184, 184);
     font-size: 20px;
     text-align: center;
-    /* position: absolute; */
-    /* top: 100px; */
     border-radius: 50%;
     padding: 10px;
 }
-.awesome{
-    width: 400px;
-    position: absolute;
-    top: 260px;
-    left: 35%;
-    
-    
-    }
- .chiefinput button{
+.sendemail h4{
+color: white;
+}
+.chiefinput button{
     background-color: red;
-    /* margin-left: 20px; */
-     /* margin-right: 0px;  */
-     /* width: 100px;  */
-    /* padding-right: 10px; */
-    
+    margin:6px;
+    padding: .5em;
+    width: 150px;
+    border: none;
+    color:white;
 } 
 .chiefinput{
-    width: 400px;
-    position: absolute;
-    left: 35%;
-    top: 200px;
+    width: 40%;
     display: flex;
-    /* padding-top: 40px; */
     background-color: white;
-
+    margin:  auto;
 }
-.r4{
+.chiefinput button .fa{
+    background:none !important;
+    border-radius: 0 !important;
+    font-size: 1em;
     color: white;
+    padding: 0;
+}
+.social-media{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 400px;
+    text-align: center;
 }
 .map{
     width: 100%;
@@ -420,7 +426,7 @@ margin: 0 auto;
     display: flex;
     position: absolute;
     left: 20%;
-    top: 200px;
+    top: 290px;
     background-color: antiquewhite;
 }
 .white{
@@ -428,19 +434,21 @@ margin: 0 auto;
     background-color: white;
 }
 .yellow{
-    background-color: rgb(185, 159, 9);
+    background-color: rgb(175, 157, 52);
+    color: white;
   width: 50%;
-  padding-top: 90px;
+  padding-top: 70px;
 }
 .yellow .fa{
-    padding: 6px;
+    padding-top: 6px;
+    margin-right: 10px;
 }
-.yellow h4{
+.space{
     font-family:  monospace;
     white-space: pre;
 }
-.yellow h2{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.info p{
+    display:flex !important;
 }
 form li{
     list-style: none;
@@ -450,329 +458,147 @@ form li{
     list-style: none;
     padding: 7px;
 }
-
-form input{
+.info{
+    margin-left: 40px;
+}
+.info h6{
+    font-weight: 700;
+    margin-left: 14px;
+}
+.info h5{
+    font-weight: 700;
+}
+form input,form textarea{
     border-width: 0 0 1px 0; 
     padding: 5px;
+    border-bottom: 1px solid gray !important;
 }
-textarea{
-    border-width: 0 0 1px 0;
-}
+
 form{padding-top: 80px;}
 .footer{
     width: 100%;
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(41, 39, 39);
     height: 300px;
     /* position: relative; */
 }
+.footer-btn{
+    background: transparent !important;
+    border: 1px solid grey;
+    padding: 5px;
+    font-size:13px;
+}
 .fat{
     width: 400px;
-    height: 200px;
     color: white;
-    padding-top: 150px;
+    padding-top: 230px;
+    /* padding-bottom: 50px; */
     margin: 0 auto;
     margin-top: 0px;
+    text-align: center;
 }
-a .fa{
+.fat .fa{
     font-size: 20px;
-    color: #888888;
- 
-    /* padding-right : 20px; */
-
+    color: rgb(41, 39, 39);
+    background-color:white;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left:5px;
+    padding: 10px;
+}
+.gold{
+    color: rgb(175, 157, 52);
 }
 
+@media screen and (min-width: 600px) and (max-width: 1200px){
+    .lefttext{
+        width: 80%;
+        /* text-align: center; */
+        margin: 30px auto;
+    }
+    .reservationboxes{
+        width: 80%;
+        margin: 0 auto;
+
+    }
+    .reservationboxes input{
+        margin-bottom: 10px;
+    }
+    .menu-box{
+        width: 70%;
+  
+    }
+    .innerbox{
+        width: 300px;
+    }
+    .maingallery{
+        width: 150px; 
+    }
+ 
+    .gallerywrap{
+        width: 65%;
+    }
+    .chiefinput{
+        width: 60%;
+    }
+}
 @media screen and (max-width: 600px){
     body{
         overflow-x: hidden;
     }
-    #nav-menu{
-        display: none;
-        height: 150px;
-        width: 150px
-    }
-    .navlogo{
-        width:190px;
-
-    }
-    
-    .navbar{
-        position: relative;
-    }
-    .hambuger{
-        /* margin-left:230px; */
-        /* display: block; */
-        position: absolute;
-        right: 90px;
-    }
-    .hambuger span{
-      height: 4px;
-      width: 30px; 
-      background-color: white;
-      display: block;
-      position: relative;
-      margin: 5px;
-
-    }
-    .navmenu{
-        background-color: aqua;
-    }
-    .navmenu a{
-        float: right;
-       display: flex;
-       flex-direction: column;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-    }
     .Mainbanner{
         height: 600px;
     }
-    .down span:nth-child(1){
-
-        transform: rotate(45deg) translate(3px, 15px);
-    }
-
-    .down span:nth-child(2){
-        opacity: 0;
-    }  
-    .down span:nth-child(3){
-
-        transform: rotate(-45deg) translate(-3px, -10px);
-    } 
     .Mainbannertext{
         width: 300px;    
     }
     .Mainbannertext h1{
         font-size: 40px;
 }
-.aftermainbanner{
-   justify-content: center;
-   height: 250px;
-   width: 100%;
+.remove{
+    display: none;
+}
+.lefttext{
+    width: 90%;
+    text-align: center;
+}
+.aftermainbannerRight{
+    display: none;
 }
 .aftermainbannerLeft{
     width: 100%;
-    height: 250px;
-}
-.aftermainbannerRight{
-  display: none;
-}
-.lefttext{
-    text-align: center;
-    /* text-align: left; */
-     /* align-items: flex-start; */
-     margin: 0 auto;
-     margin-top: 40px;
-}
-.menubar{
-    display: none;
 }
 .showimages{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 900px;
+flex-direction: column;
 }
 .s1{
-    height: 300px;
-    width: 100%;
-}
+    width:100%;
 
- .fourth{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    height: 300px;
-    position: relative;
-  }
-  
-  
-  .fourthtext{
-      width: 100%;
-      height: 150px;
-      /* padding-left: 400px; */
-      padding-top: 30px;
-      text-align: center;
-  }  
-  .uptext{
-    font-size: 20px;
-    align-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
-    /* top: 60px; 
-    bottom: 20px;  */
-    text-align: center;
-}
-
-.foodmenu{
-    width: 100%;
-    height: 1050px;
-    display:flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-
-}
-.leftbox{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   /* align-items: flex-start; */
-   height: 480px;
-   margin: 0px auto;
-}
-.innerbox{
-    width: 80%;
-    height: 110px;
-    /* border-radius: 5px solid aquamarine; */
-    box-shadow: 5px 10px 18px #888888;
-    /* padding-right: 30px; */
-    display: flex;
-    margin: 0 auto;
-}
-
-.rightbox{
-    width: 80%;
-    height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0 auto;
-}
-.reservation{
-    background-image: url(images/PIZZA.jpg);
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    align-content: center;
-    position: relative;
-}
-.reservationboxes{
-    width: 300px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    /* align-content: center; */
-    /* flex-wrap: wrap;*/
-    position: absolute;
-    top: 100px; 
-    /* left: 20%; */
-    /* justify-content: space-around; */
-}
-.reservationboxes input{
-    padding: 10px;
-    width: 80%;
-    color: grey;
-}
-.reservationboxes button{
-    align-items: center;
-    margin: 0 auto;
-}
-.reservationtext{
-    height: 150px;
-    text-align: center;
-   padding-top: 50px;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.cheifgallery{
-    height: 600px;
-    width: 100%;
-    /* background-color: aqua; */
-     position: relative; 
-}
-.maingallery{
-    width: 200px; 
-    height: 200px;
-    justify-content: space-around;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
 }
 .gallerywrap{
-    width: 400px;
-    height: 550px;
-    display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-     position: absolute;
-    left: 15%;  
-    justify-content: center;
-    /* background-color: rgba(0, 0, 255, 0.822) */
+width: 350px;
 }
- .newbox{
-    width: 100%;
-    height: 740px;
-    background-image: url(images/apple.png), url(images/straw.png);
-    background-position: left bottom, right top;
-   background-repeat: no-repeat, no-repeat; 
-   background-size: 50px 50px;
-   /* background-color: black; */
-   /* margin-top: 0; */
+.maingallery{
+    width: 150px; 
 }
-.remove{
-    display: none;
-} 
- 
-.sendemail{
-    background-image: url(images/wine4.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    position: relative;
-    justify-content: center;
-}
-
-.email{
-   align-self: center;
-   background-color: white;
-padding: 10px;
-border: 0px none white;
-width: 60%;
-color: grey;
-} 
-.sendemail .fa{
-    background-color: rgb(190, 184, 184);
-    font-size: 20px;
-    text-align: center;
-}
-.awesome{
-width: 400px;
-position: absolute;
-top: 250px;
-left: 20%;
-margin: 10px auto;
-
-
-}
-.sendemail .fa{
-    background-color: rgb(190, 184, 184);
-    font-size: 20px;
-    text-align: center;
-   
-    /* padding: 10px; */
-
-}
- .chiefinput button{
-    background-color: red;
-    
-    padding-right: 10px;
-} 
 .chiefinput{
-    width: 400px;
-    position: absolute;
-    left: 10%;
-    top: 200px;
-    /* padding-top: 40px; */
-    background-color: white;
-    display: flex;
-    align-self: center;
+    width: 80%;
 }
-.r4{
+.reservationboxes{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.reservationboxes input{
+    margin-bottom: 10px;
+}
+.red-btn{
+    background: red;
     color: white;
+    width: 205px;
+    padding: .3em;
 }
 .hangingbox{
     width: 60%;
@@ -780,8 +606,7 @@ margin: 10px auto;
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 20%;
-    top: 90px;
+    top: 0px;
     background-color: antiquewhite;
 }
 .white{
@@ -806,266 +631,15 @@ form{
    position: relative;
 }
 .footer{
-    width: 100%;
-    background-color:rgb(0, 0, 0);
     height: 300px;
     padding-top:  200px;
 }
 .fat{
-    width: 400px;
     height: 90px;
-    /* position: absolute; */
-    /* z-index: 70px; */
      margin: 0 auto;
      margin-top: 0px;
      text-align: center;
      padding-top: 40px;
+}
+}
 
-     
-}
-.year{
-    width: 900px;
-    background-color: red;
-    height: 200px;
-}}
-@media screen and (min-width:600px) and (max-width: 1000px) {
-   
-   body{
-    overflow-x: hidden;
-   } 
-   .navmenu{
-        display: none;
-    }
-    .menubar a{
-        display: none;
-    }
-  .leftbox{
-    margin: 0 auto;
-
-  }
-    .Mainbannertext{
-        width: 500px;
-    }
-    .Mainbannertext h1{
-        font-size: 50px;    
-    }
-    .showimages{
-        width: 100%;
-        display: flex;
-        /* flex-direction: column; */
-        height: 300px;
-    }
-    .s1{
-        height: 300px;
-        width: 33.4%;
-    }
-    .foodmenu{
-        width: 100%;
-        height: 500px;
-        display:flex;
-        /* flex-direction: column; */
-        margin-top: 0px;
-        margin-bottom: 60px;
-    
-    }
-    .leftbox{
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-       /* align-items: flex-start; */
-       height: 480px;
-       margin: 0px auto;
-    }
-    .innerbox{
-        width: 80%;
-        height: 110px;
-        /* border-radius: 5px solid aquamarine; */
-        box-shadow: 5px 10px 18px #888888;
-        display: flex;
-        margin: 0 auto;
-    
-    }
-    
-    .rightbox{
-        width: 40%;
-        height: 480px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin: 0 auto;
-    }
-    .chiefinput{
-        width: 70%;
-        position: absolute;
-        left: 0%;
-        top: 200px;
-        margin: 0 auto;
-        padding-top: 40px;
-        background-color: white;
-        align-content: center;
-    }
-.aftermainbanner{
-   justify-content: center;
-   width: 100%;
-
-}
-.aftermainbannerLeft{
-    width: 300px;
-    height: 300px;
-    align-items: center;
-}
-.aftermainbannerRight{
-  display: none;
-}
-.lefttext{
-    text-align: center;
-     margin-left: 50px;
-     width: 400px;    
-}
-.r4{
-    color: white;
-}
-.hangingbox{
-    width: 60%;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 20%;
-    top: 90px;
-    background-color: antiquewhite;
-}
-.white{
-    width: 100%;
-    height: 350px;
-    background-color: white;
-}
-form{
-    padding-top: 50px;
-}
-.yellow{
-    background-color: rgb(185, 159, 9);
-  width: 100%;
-  height: 350px;
-  padding-top: 50px;
-}
-.map{
-    width: 100%;
-    height: 600px;
-    background-image: url(images/map5.jpg);
-    background-size: cover;
-   position: relative;
-}
-.footer{
-    width: 100%;
-    background-color:rgb(0, 0, 0);
-    height: 300px;
-    /* position: relative; */
-}
-.fat{
-    width: 400px;
-    height: 90px;
-    /* displatty: flex; */
-    /* background-color: aqua; */
-    z-index: 70px;
-     margin: 0 auto;
-     /* margin-top: 90px; */
-     
-}
-.year{
-    width: 900px;
-    background-color: red;
-    height: 200px;
-}
-.reservation{
-    background-image: url(images/PIZZA.jpg);
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    align-content: center;
-    position: relative;   
-}
-.reservationboxes{
-    width: 300px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100px; 
-    margin-left: 60px
-}
-.reservationboxes input{
-    padding: 10px;
-    width: 60%;
-}
-.reservationtext{
-    height: 150px;
-    text-align: center;
-   padding-top: 50px;
-
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.cheifgallery{
-    height: 600px;
-    width: 100%;
-    /* background-color: aqua; */
-     position: relative; 
-
-}
-.maingallery{
-    width: 200px; 
-    height: 200px;
-    justify-content: space-around;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    
-}
-.gallerywrap{
-    width:90%;
-    height: 600px;
-    display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-     position: absolute;
-    left: 15%;  
-    justify-content: center;
-    /* background-color: rgba(0, 0, 255, 0.822) */
-}
-.footer{
-    width: 100%;
-    background-color:rgb(0, 0, 0);
-    height: 300px;
-    padding-top:  200px;
-     margin: 0 auto;
-    
-}
-/* .fat{
-    width: 400px;
-    height: 90px;
-    position: absolute;
-    /* z-index: 70px; */
-     /* margin: 0 auto; */
-     /* margin-top: 150px;
-     text-align: center;
-     padding-top: 30px; */
-     
-/* } */ */
-.fat{
-    width: 400px;
-    height: 90px;
-    /* displatty: flex; */
-    /* background-color: aqua; */
-    z-index: 70px;
-     margin: 0 auto;
-     /* margin-top: 90px; */
-     
-}
-.year{
-    width: 900px;
-    background-color: red;
-    height: 200px;
-}
-}
